@@ -18,7 +18,7 @@ loadCallComposite({
 }, container).then((adapter) => {
   if (adapter) {
     adapter.on('callEnded', () => {
-      console.log('Call ended');
+      adapter.dispose();
     });
   }
 });
