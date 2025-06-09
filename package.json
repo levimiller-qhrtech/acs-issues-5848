@@ -5,14 +5,17 @@
     "npm": "10.9.2"
   },
   "scripts": {
-    "start": "http-server -o src/call.html",
-    "build": "webpack --config webpack.config.js"
+    "start": "npm run http-server & npm run ngrok",
+    "build": "webpack --config webpack.config.js",
+    "http-server": "http-server",
+    "ngrok": "ngrok http 8080"
   },
   "dependencies": {
     "@azure/communication-calling": "1.35.1",
     "@azure/communication-common": "^2.4.0",
     "@azure/communication-react": "1.27.1",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "ngrok": "^5.0.0-beta.2"
   },
   "devDependencies": {
     "@types/node": "^22.15.29",
